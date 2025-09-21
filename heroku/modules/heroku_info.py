@@ -130,7 +130,7 @@ class HerokuInfoMod(loader.Module):
             platform = platform.replace(emoji, icon)
         return (
             (
-                "👁️ EyeBot\n"
+                "👁️ EyeBot"
                 if self.config["showEyeBot"]
                 else ""
             )
@@ -166,7 +166,7 @@ class HerokuInfoMod(loader.Module):
                 f' {self.strings("ram_usage")}:'
                 f"</b> <i>~{utils.get_ram_usage()} MB</i>\n<b>{{}}</b>"
             ).format(
-                "👁️ EyeBot\n"
+                "👁️ EyeBot"
                 if self.config["showEyeBot"]
                 else "",
                 "<emoji document_id=5373141891321699086>😎</emoji>",
