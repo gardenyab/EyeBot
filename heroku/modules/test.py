@@ -42,7 +42,7 @@ class TestMod(loader.Module):
     """Perform operations based on userbot self-testing"""
 
     strings = {
-        "name": "Tester",
+        "name": "Test",
     }
 
     def __init__(self):
