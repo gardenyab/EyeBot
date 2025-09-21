@@ -46,12 +46,12 @@ class HerokuInfoMod(loader.Module):
 
             loader.ConfigValue(
                 "banner_url",
-                "https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/heroku_info.png",
+                "https://i.postimg.cc/rmZntysL/eyebotinfo.png",
                 lambda: self.strings("_cfg_banner"),
             ),
 
             loader.ConfigValue(
-                "show_heroku",
+                "showEyeBot",
                 True,
                 validator=loader.validators.Boolean(),
             ),
@@ -60,20 +60,6 @@ class HerokuInfoMod(loader.Module):
                 "🪐",
                 lambda: self.strings["ping_emoji"],
                 validator=loader.validators.String(),
-            ),
-            loader.ConfigValue(
-                "switchInfo",
-                False,
-                "Switch info to mode photo",
-                validator=loader.validators.Boolean(),
-            ),
-            loader.ConfigValue(
-                "imgSettings",
-                ["Лапокапканот", 30, '#000', '0|0', "mm", 0, '#000'],
-                "Image settings\n1. Дополнительный ник (если прежний ник не отображается)\n2. Размер шрифта\n3. Цвет шрифта в HEX формате '#000'\n4. Координаты текста '100|100', по умолчания в центре фотографии\n5. Якорь текста -> https://pillow.readthedocs.io/en/stable/_images/anchor_horizontal.svg\n6. Размер обводки, по умолчанию 0\n7. Цвет обводки в HEX формате '#000'",
-                validator=loader.validators.Series(
-                    fixed_len=7,
-                ),
             ),
         )
 
@@ -110,7 +96,7 @@ class HerokuInfoMod(loader.Module):
         except Exception:
             upd = ""
 
-        me = self.config['imgSettings'][0] if (self.config['imgSettings'][0] != "Лапокапканот") and self.config['switchInfo'] else '<b><a href="tg://user?id={}">{}</a></b>'.format(
+        me = '<b><a href="tg://user?id={}">{}</a></b>'.format(
             self._client.heroku_me.id,
             utils.escape_html(get_display_name(self._client.heroku_me)),
         ).replace('{', '').replace('}', '')
@@ -144,8 +130,8 @@ class HerokuInfoMod(loader.Module):
             platform = platform.replace(emoji, icon)
         return (
             (
-                "🪐 Heroku\n"
-                if self.config["show_heroku"]
+                "👁️ EyeBot\n"
+                if self.config["showEyeBot"]
                 else ""
             )
             + self.config["custom_message"].format(
@@ -180,11 +166,9 @@ class HerokuInfoMod(loader.Module):
                 f' {self.strings("ram_usage")}:'
                 f"</b> <i>~{utils.get_ram_usage()} MB</i>\n<b>{{}}</b>"
             ).format(
-                (
-                    utils.get_platform_emoji()
-                    if self._client.heroku_me.premium and self.config["show_heroku"]
-                    else ""
-                ),
+                "👁️ EyeBot\n"
+                if self.config["showEyeBot"]
+                else "",
                 "<emoji document_id=5373141891321699086>😎</emoji>",
                 "<emoji document_id=5469741319330996757>💫</emoji>",
                 "<emoji document_id=5449918202718985124>🌳</emoji>",

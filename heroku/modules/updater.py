@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class UpdaterMod(loader.Module):
-    """Updates itself, tracks latest Heroku releases, and notifies you, if update is required"""
+    """Updates itself, tracks latest EyeBot releases, and notifies you, if update is required"""
 
     strings = {"name": "Updater"}
 
@@ -47,7 +47,7 @@ class UpdaterMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "GIT_ORIGIN_URL",
-                "https://github.com/coddrago/Heroku",
+                "https://github.com/c",
                 lambda: self.strings("origin_cfg_doc"),
                 validator=loader.validators.Link(),
             ),
