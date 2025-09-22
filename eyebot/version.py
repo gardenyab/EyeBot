@@ -16,7 +16,7 @@ __version__ = (1, 7, 1)
 import os
 
 import git
-from heroku._internal import restart
+from eyebot._internal import restart
 
 try:
     branch = git.Repo(
