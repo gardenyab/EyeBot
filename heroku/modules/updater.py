@@ -108,7 +108,7 @@ class UpdaterMod(loader.Module):
         if self._pending not in {utils.get_git_hash(), self._notified}:
             m = await self.inline.bot.send_photo(
                 self.tg_id,
-                "https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/updated.png",
+                "https://i.imgur.com/IlGOX6v.jpeg",
                 caption=self.strings("update_required").format(
                     utils.get_git_hash()[:6],
                     '<a href="https://github.com/GardenYab/EyeBot/compare/{}...{}">{}</a>'.format(
