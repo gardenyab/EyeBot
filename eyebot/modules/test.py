@@ -84,7 +84,7 @@ class TestMod(loader.Module):
             ),
             loader.ConfigValue(
                 "Text_Of_Ping",
-                "<emoji document_id=5920515922505765329>⚡️</emoji> <b>𝙿𝚒𝚗𝚐: </b><code>{ping}</code><b> 𝚖𝚜 </b>\n<emoji document_id=5900104897885376843>🕓</emoji><b> 𝚄𝚙𝚝𝚒𝚖𝚎: </b><code>{uptime}</code>",
+                "<emoji document_id=5920515922505765329>⚡️</emoji> <b>Ping: </b><code>{ping}</code><b> 𝚖𝚜 </b>\n<emoji document_id=5900104897885376843>🕓</emoji><b> Uptime: </b><code>{uptime}</code>",
                 lambda: self.strings["configping"],
                 validator=loader.validators.String(),
             ),
@@ -96,7 +96,7 @@ class TestMod(loader.Module):
             ),
             loader.ConfigValue(
                 "ping_emoji",
-                "🪐",
+                "👀",
                 lambda: self.strings["ping_emoji"],
                 validator=loader.validators.String(),
             ),
@@ -335,7 +335,7 @@ class TestMod(loader.Module):
             *main.__version__,
             (
                 " <a"
-                f' href="https://github.com/coddrago/Heroku/commit/{ghash}">@{ghash[:8]}</a>'
+                f' href="https://github.com/gardenyab/EyeBot/commit/{ghash}">@{ghash[:8]}</a>'
                 if ghash
                 else ""
             ),
@@ -413,11 +413,11 @@ class TestMod(loader.Module):
     async def client_ready(self):
         chat, _ = await utils.asset_channel(
             self._client,
-            "heroku-logs",
-            "🪐 Your Heroku logs will appear in this chat",
+            "EyeLogs",
+            "👀 Your EyeBot logs will appear in this chat",
             silent=True,
             invite_bot=True,
-            avatar="https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/heroku_logs.png",
+            avatar="https://i.imgur.com/VSGa3Zy.jpeg",
         )
 
         self.logchat = int(f"-100{chat.id}")
