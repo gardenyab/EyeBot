@@ -53,13 +53,13 @@ class TokenObtainment(InlineUnit):
                     pass
                 else:
                     uid = utils.rand(6)
-                    username = f"@heroku_{uid}_bot"
+                    username = f"@eye_{uid}_bot"
             else:
                 uid = utils.rand(6)
-                username = f"@heroku_{uid}_bot"
+                username = f"@eye_{uid}_bot"
 
             for msg in [
-                f"🪐 Heroku userbot"[:64],
+                f"👀 EyeBot"[:64],
                 username,
                 "/setuserpic",
                 username,
@@ -79,7 +79,7 @@ class TokenObtainment(InlineUnit):
                 await fw_protect()
                 from .. import main
 
-                m = await conv.send_file("https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/heroku.png")
+                m = await conv.send_file("https://i.imgur.com/ux2LqRh.jpeg")
                 r = await conv.get_response()
 
                 logger.debug(">> <Photo>")
@@ -154,7 +154,7 @@ class TokenObtainment(InlineUnit):
                         "heroku.inline",
                         "custom_bot",
                         False,
-                    ) and not re.search(r"@heroku_[0-9a-zA-Z]{6}_bot", button.text):
+                    ) and not re.search(r"@eye_[0-9a-zA-Z]{6}_bot", button.text):
                         continue
 
                     await fw_protect()
@@ -204,7 +204,7 @@ class TokenObtainment(InlineUnit):
                     for msg in [
                         "/setinline",
                         button.text,
-                        "user@heroku:~$",
+                        "user@eye:~$",
                         "/setinlinefeedback",
                         button.text,
                         "Enabled",
@@ -227,7 +227,7 @@ class TokenObtainment(InlineUnit):
                         await fw_protect()
                         from .. import main
 
-                        m = await conv.send_file("https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/heroku.png")
+                        m = await conv.send_file("https://i.imgur.com/ux2LqRh.jpeg")
                         r = await conv.get_response()
 
                         logger.debug(">> <Photo>")
