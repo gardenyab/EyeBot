@@ -54,7 +54,7 @@ def getlines(filename: str, module_globals=None) -> str:
     try:
         if filename.startswith("<") and filename.endswith(">"):
             module = filename[1:-1].split(maxsplit=1)[-1]
-            if (module.startswith("heroku.modules")) and module in sys.modules:
+            if (module.startswith("eyebot.modules")) and module in sys.modules:
                 return list(
                     map(
                         lambda x: f"{x}\n",
