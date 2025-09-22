@@ -14,6 +14,7 @@
 import logging
 
 from .. import loader, utils
+from herokutl.tl.types import Message
 
 
 logger = logging.getLogger(__name__)
