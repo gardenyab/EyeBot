@@ -1,4 +1,4 @@
-heroku_security:
+eyebot_security:
   invalid_name: "<emoji document_id=5210952531676504517>🚫</emoji> <b>Ungültiger Name</b>"
   no_command: "<emoji document_id=5210952531676504517>🚫</emoji> <b>Befehl</b> <code>{}</code> <b>nicht gefunden!</b>"
   permissions: "🔐 <b>Hier können die Berechtigungen für den Befehl</b> <code>{}{}</code> <b>konfiguriert werden</b>"
@@ -89,7 +89,7 @@ heroku_security:
   _cmd_doc_sgroupadd: "<Name> [Benutzer oder Antwort] - Benutzer zur Sicherheitsgruppe hinzufügen"
   _cmd_doc_sgroupdel: "<Name> [Benutzer oder Antwort] - Benutzer aus der Sicherheitsgruppe entfernen"
 
-heroku_settings:
+eyebot_settings:
   watchers: "<emoji document_id=5424885441100782420>👀</emoji> <b>Wächter:</b>\n\n<blockquote expandable><b>{}</b></blockquote>"
   mod404: "<emoji document_id=5210952531676504517>🚫</emoji> <b>Wächter {} nicht gefunden</b>"
   disabled: "<emoji document_id=5424885441100782420>👀</emoji> <b>Wächter {} ist jetzt <u>deaktiviert</u></b>"
@@ -176,7 +176,7 @@ terminal:
   _cmd_doc_terminal: "<Befehl> - Führen Sie einen Befehl im System aus"
   _cmd_doc_terminate: "[-f zum Erzwingen] - Antworten Sie auf eine Nachricht, um den Prozess zu beenden"
 
-heroku_web:
+eyebot_web:
   privacy_leak: "⚠️ <b>Dieser Befehl gewährt Zugriff auf die Heroku-Weboberfläche. Die Ausführung in öffentlichen Chats stellt ein Sicherheitsrisiko dar. Es wird empfohlen, dies in den <a href='tg://openmessage?user_id={}'>Gespeicherten Nachrichten</a> auszuführen. Führe</b> <code>{}proxypass force_insecure</code> <b>aus, um diese Warnung zu deaktivieren</b>"
   privacy_leak_nowarn: "⚠️ <b>Dieser Befehl gewährt Zugriff auf die Heroku-Weboberfläche. Die Ausführung in öffentlichen Chats stellt ein Sicherheitsrisiko dar. Es wird empfohlen, dies in den <a href='tg://openmessage?user_id={}'>Gespeicherten Nachrichten</a> auszuführen.</b>"
   opening_tunnel: "🔁 <b>Öffne Tunnel zur Heroku-Weboberfläche...</b>"
@@ -187,7 +187,7 @@ heroku_web:
   lavhost_web: "✌️ <b>Über diesen Link gelangst du zur Heroku-Weboberfläche auf lavHost</b>\n\n<i>💡 Du musst dich mit den bei der lavHost-Einrichtung angegebenen Daten anmelden</i>"
   _cmd_doc_weburl: "Öffnet einen Tunnel zur Heroku-Weboberfläche"
 
-heroku_backup:
+eyebot_backup:
   period: "⌚️ <b>Die Unit «ALPHA»</b> erstellt regelmäßig Backups. Diese Einstellungen können später geändert werden.\n\nBitte wählen Sie die Backup-Häufigkeit\n\n<b>🚫 Es ist daher nicht möglich, Module, die mit dem Befehl .lm aus Dateien heruntergeladen wurden, wiederherzustellen! Seien Sie vorsichtig und führen Sie vor der Wiederherstellung .backupmods aus.</b>"
   saved: "✅ Die Periodizität ist gespeichert! Sie kann mit <code>{prefix}set_backup_period</code> geändert werden."
   saved_bot: "✅ Die Periodizität ist gespeichert! Sie kann mit {prefix}set_backup_period geändert werden."
@@ -283,7 +283,7 @@ settings:
   _cmd_doc_unblacklist: "[Chat] - Aktiviert den Bot an einem bestimmten Ort"
   _cmd_doc_unblacklistuser: "[Benutzer] - Erlaubt einem Benutzer, Befehle auszuführen"
 
-heroku_config:
+eyebot_config:
   choose_core: "⚙️ <b>Wähle eine Kategorie</b>"
   configure: "⚙️ <b>Wähle ein Modul zur Konfiguration</b>"
   configure_lib: "📦 <b>Wähle eine Bibliothek zur Konfiguration</b>"
@@ -427,7 +427,7 @@ help:
   _cmd_doc_helphide: "<Modul oder Module> - Versteckt das Modul(-e) aus der Hilfe\n*Trenne die Module mit Leerzeichen"
   _cmd_doc_support: "Zeigt den Link zum Heroku Hilfe-Chat"
 
-heroku_info:
+eyebot_info:
   owner: "Besitzer"
   version: "Version"
   build: "Build"
