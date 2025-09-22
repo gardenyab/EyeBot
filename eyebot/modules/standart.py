@@ -92,6 +92,16 @@ class StandartMod(loader.Module):
                     user=getpass.getuser(),
         ),
             )
+    
+    def _pass_config_to_logger(self):
+        logging.getLogger().handlers[0].force_send_all = self.config["force_send_all"]
+        logging.getLogger().handlers[0].tg_level = {
+            "INFO": 20,
+            "WARNING": 30,
+            "ERROR": 40,
+            "CRITICAL": 50,
+        }[self.config["tglog_level"]]
+        logging.getLogger().handlers[0].ignore_common = self.config["ignore_common"]
 
     async def client_ready(self):
         chat, _ = await utils.asset_channel(
