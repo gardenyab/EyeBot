@@ -17,6 +17,7 @@ import os
 import subprocess
 import sys
 import hashlib
+import traceback
 
 from ._internal import restart
 
@@ -93,6 +94,7 @@ else:
         log.init()
         from . import main
     except ImportError as e:
+        traceback.print_exc()
         print(f"{str(e)}\n\U0001F504 Attempting dependencies installation... Just wait ⏱")
         deps()
         restart()
