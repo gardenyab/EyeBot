@@ -71,7 +71,7 @@ if (
 
 if sys.version_info < (3, 9, 0):
     print("\U0001F6AB Error: you must use at least Python version 3.9.0")
-elif __package__ != "heroku":
+elif __package__ != "eyebot":
     print("\U0001F6AB Error: you cannot run this as a script; you must execute as a package")
 else:
     try:
