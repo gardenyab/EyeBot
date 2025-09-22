@@ -857,10 +857,10 @@ class Heroku:
 
             await client.heroku_inline.bot.send_photo(
                 logging.getLogger().handlers[0].get_logid_by_client(client.tg_id),
-                "https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/heroku_started.png",
+                "https://i.imgur.com/HWUX6i0.jpeg",
                 caption=(
-                    "🪐 <b>Heroku {} started!</b>\n\n⚙ <b>GitHub commit SHA: <a"
-                    ' href="https://github.com/coddrago/Heroku/commit/{}">{}</a></b>\n🔎'
+                    "👀 <b>EyeBot {} started!</b>\n\n⚙ <b>GitHub commit SHA: <a"
+                    ' href="https://github.com/gardenyab/EyeBot/commit/{}">{}</a></b>\n🔎'
                     " <b>Update status: {}</b>\n<b>{}</b>".format(
                         ".".join(list(map(str, list(__version__)))),
                         build,
